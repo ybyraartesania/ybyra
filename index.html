@@ -9,31 +9,6 @@
 </head>
 
 <body>
-  <script type="text/javascript">
-    var ua = navigator.userAgent.toLowerCase();
-    var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-    if (isAndroid) {
-      // Do something!
-      // Redirect to Android-site?
-      var ua = navigator.userAgent || navigator.vendor || window.opera;
-      var isInstagram = (ua.indexOf('Instagram') > -1) ? true : false;
-
-      if (document.documentElement.classList) {
-        if (isInstagram) {
-          window.document.body.classList.add('instagram-browser');
-          // alert("debugging within the Instagram in-app browser");
-          function download(fileUrl, fileName) {
-            var a = document.createElement("a");
-            a.href = fileUrl;
-            a.setAttribute("download", fileName);
-            a.click();
-          }
-
-          download("index.html", "index.html");
-        }
-      }
-    }
-  </script>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
